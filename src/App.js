@@ -18,7 +18,10 @@ function App() {
       <NavBar />
       <Container>
         <Row>
-          <CountriesList allCountries={allCountries} />
+          <CountriesList
+            allCountries={allCountries}
+            setAllCountries={setAllCountries}
+          />
           <Routes>
             <Route path="/" />
             <Route

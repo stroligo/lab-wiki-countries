@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function CountriesList({ allCountries }) {
   return (
-    <Col sm={5} style={{ maxHeight: '90vh', overflow: 'scroll' }}>
+    <Col sm={4} style={{ maxHeight: '90vh', overflow: 'scroll' }}>
       <ListGroup>
         {allCountries.map((country) => {
           return (

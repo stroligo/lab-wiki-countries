@@ -10,7 +10,7 @@ function CountryDetails({ allCountries }) {
   const country = selectCountry(id);
 
   return (
-    <Col sm={7}>
+    <Col sm={8}>
       <h3>
         <img
           src={
@@ -38,6 +38,39 @@ function CountryDetails({ allCountries }) {
               <sup>2</sup>
             </td>
           </tr>
+
+          <tr>
+            <td>Region</td>
+            <td>{country.region}</td>
+          </tr>
+
+          <tr>
+            <td>Sub-Region</td>
+            <td>{country.subregion}</td>
+          </tr>
+
+          <tr>
+            <td>Languages</td>
+            <td>
+              <ul>
+                {Object.keys(country.languages).map((lang) => (
+                  <li key={lang}>{country.languages[lang]}</li>
+                ))}
+              </ul>
+            </td>
+          </tr>
+
+          {/* <tr> Não consegui acessar sum sub nivel do objeto
+            <td>Currencies</td>
+            <td>
+              <ul>
+                {country.currency.map((el) => {
+                  return <li key={el}>{country}</li>;
+                })}
+              </ul>
+            </td>
+          </tr> */}
+
           <tr>
             <td>Borders</td>
             <td>
