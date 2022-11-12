@@ -1,6 +1,7 @@
 import { Table, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import GoogleMap from './GoogleMap';
 
 function CountryDetails({ allCountries }) {
   const { id } = useParams();
@@ -60,16 +61,12 @@ function CountryDetails({ allCountries }) {
             </td>
           </tr>
 
-          {/* <tr> Não consegui acessar sum sub nivel do objeto
-            <td>Currencies</td>
+          <tr>
+            <td>Localization</td>
             <td>
-              <ul>
-                {country.currency.map((el) => {
-                  return <li key={el}>{country}</li>;
-                })}
-              </ul>
+              <GoogleMap latlng={country.latlng}></GoogleMap>
             </td>
-          </tr> */}
+          </tr>
 
           <tr>
             <td>Borders</td>
